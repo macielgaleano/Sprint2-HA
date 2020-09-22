@@ -1,8 +1,7 @@
 const http = require("http");
 const fs = require("fs");
 const slugify = require('slugify', {
-    replacement: '-',
-    remove: '/[
+    replacement: '-'
 });
 
 
