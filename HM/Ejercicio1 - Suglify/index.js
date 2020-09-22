@@ -1,6 +1,9 @@
 const http = require("http");
 const fs = require("fs");
-const slugify = require('slugify')
+const slugify = require('slugify', {
+    replacement: '-',
+    remove: '/[
+});
 
 
 const server = http.createServer(function(req,res){
