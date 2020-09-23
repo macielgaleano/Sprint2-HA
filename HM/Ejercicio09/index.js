@@ -14,7 +14,7 @@ app.get("/", (req, res) => {
 app.get("/multiplicar", (req, res) => {
   const num1 = req.query.num1;
   const num2 = req.query.num2;
-  res.send(num1 * num2);
+  res.send(`${num1* num2}`);
 });
 
 app.listen(3000, () => {
