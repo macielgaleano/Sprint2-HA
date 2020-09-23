@@ -13,13 +13,13 @@
   <body>
     <div class="container">
       <h1>Multiplicar</h1>
-      <form action="http://localhost:3000/multiplicar" method="get">
+      <form onsubmit="handleSubmit()">
         <div class="form-group">
           <label for="nom1">Numero 1</label>
-          <input type="text" name="nom1" id="nom1" class="form-control nom1 mb-4" placeholder="" aria-describedby="helpId">
+          <input type="text" name="nom1" id="nom1" class="form-control nom1 mb-4" >
           <label for="nom2">Numero 2</label>
-          <input type="text" name="nom2" id="nom2" class="form-control nom2 mb-4" placeholder="" aria-describedby="helpId">
-          <button class="btn btn-success" type="submit">Enviar</button>
+          <input type="text" name="nom2" id="nom2" class="form-control nom2 mb-4">
+          <input class="btn btn-success" type="submit" value='enviar'>
         </div>
       </form>
       <h2>Value <span id="result"></span></h2>

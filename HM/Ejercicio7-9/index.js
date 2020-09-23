@@ -12,7 +12,7 @@ app.get('/app', (req, res) => {
   res.sendFile(__dirname + '/app.js')
 });
 
-app.get('/multiplicar', (req, res) => {
+app.post('/multiplicar', (req, res) => {
   let result = (Number(req.query.nom1) * Number(req.query.nom2));
   console.log(result);
   res.send(result);
