@@ -8,25 +8,5 @@
     <header>
         <%- include('../partials/header'); %>
     </header>
-
-    <main>
-        <div class="jumbotron">
-            <h1>Top Mascots</h1>
-            <p><%= tagline %></p>
-            <ul>
-                <% mascots.forEach(function(mascot) { %>
-                    <li>
-                        <strong><%= mascot.name %></strong>
-                        representing <%= mascot.organization %>, born <%= mascot.birth_year %>
-                    </li>
-                <% }); %>
-            </ul>
-        </div>
-    </main>
-
-    <footer>
-        <%- include('../partials/footer'); %>
-    </footer>
-
 </body>
 </html>
