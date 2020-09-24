@@ -8,6 +8,7 @@ module.exports= function(app) {
   });
 
   app.post('/frutas', (req, res) => {
-    res.render('pages/frutas')
+    // res.render('pages/frutas')''
+    console.log(req.body);
   });
 }
