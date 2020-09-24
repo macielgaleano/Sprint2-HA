@@ -5,10 +5,10 @@
     <li class="list-group-item"><%= frutas[i] %></li>
   <% } %>
 </ul>
-<div class="form-inline mt-4">
-  <label for="fruta_ingresada"></label>
+<form method="POST" action='/frutas' class="form-inline mt-4">
+  <label for="fruta_ingresadas"></label>
   <input type="text"
     class="form-control ml-4" name="fruta_ingresada" id="fruta_ingresada" aria-describedby="helpId" placeholder="Ingrese fruta">
-    <button name="" type="submit" id="boton" class="btn btn-primary" role="button">Enviar</button>
-</div>
+  <button type="submit" id="boton" class="btn btn-primary">Enviar</button>
+</form>
 <%- include('../partials/end-body'); %>
