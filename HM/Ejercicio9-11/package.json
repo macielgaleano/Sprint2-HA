@@ -1,9 +1,18 @@
 {
-  "name": "node-ejs",
+  "name": "ejs",
   "main": "server.js",
   "dependencies": {
+    "body-parser": "^1.19.0",
     "ejs": "^3.1.5",
     "express": "^4.17.1",
     "node-datetime": "^2.1.2"
-  }
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "description": "This is demo code for a DigitalOcean tutorial here: https://www.digitalocean.com/community/tutorials/how-to-use-ejs-to-template-your-node-application",
+  "version": "1.0.0",
+  "devDependencies": {},
+  "author": "",
+  "license": "ISC"
 }

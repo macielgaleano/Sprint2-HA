@@ -1,0 +1,14 @@
+<%- include('../partials/head'); %>
+<h1 class="ml-4">Frutas</h1>
+<ul class="list-group ml-4">
+  <% for(var i=0; i<frutas.length; i++) {%>
+    <li class="list-group-item"><%= frutas[i] %></li>
+  <% } %>
+</ul>
+<div class="form-inline mt-4">
+  <label for="fruta_ingresada"></label>
+  <input type="text"
+    class="form-control ml-4" name="fruta_ingresada" id="fruta_ingresada" aria-describedby="helpId" placeholder="Ingrese fruta">
+    <button name="" type="submit" id="boton" class="btn btn-primary" role="button">Enviar</button>
+</div>
+<%- include('../partials/end-body'); %>
