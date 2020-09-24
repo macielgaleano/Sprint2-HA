@@ -10,7 +10,7 @@ module.exports= function(app) {
   app.post('/frutas', (req, res) => {
     // res.render('pages/frutas')''
     req.body.fruta_ingresada
-    frutasList.push(req.body.fruta_ingresada);
+    frutasList.push( req.body.fruta_ingresada);
     res.render('pages/frutas', {frutas: frutasList})
   });
 }
