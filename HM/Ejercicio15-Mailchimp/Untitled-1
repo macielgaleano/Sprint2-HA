@@ -1,0 +1,11 @@
+
+    //Api key: d53f45edfe405e2764e1071223e73088-us2
+    curl --request GET \
+  --url 'https://us2.api.mailchimp.com/3.0/' \
+  --user 'anystring:d53f45edfe405e2764e1071223e73088-us2' 
+
+  curl -X GET \  'https://server.api.mailchimp.com/3.0/lists?fields=<SOME_ARRAY_VALUE>&exclude_fields=
+  <SOME_ARRAY_VALUE>&count=10&offset=0&before_date_created=<SOME_STRING_VALUE>&since_date_created=<SOME_STRING_VALUE>
+  &before_campaign_last_sent=<SOME_STRING_VALUE>&since_campaign_last_sent=<SOME_STRING_VALUE>&email=<SOME_STRING_VALUE>&sort_field=
+  <SOME_STRING_VALUE>&sort_dir=<SOME_STRING_VALUE>' \
+  -H 'authorization: Basic <USERNAME:PASSWORD>'

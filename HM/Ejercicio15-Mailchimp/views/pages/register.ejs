@@ -1,0 +1,22 @@
+<%- include('../partials/head'); %>
+
+<div class="container">
+  <form method="POST" action='/newsletter-registro' class="form-group mt-4">
+  
+    <label for="name">Name</label>
+    <input type="text" name="name" id="name" class="form-control" placeholder="" >
+    
+    <label for="surname">Surname</label>
+    <input type="text" name="surname" id="surname" class="form-control" placeholder="" >
+    
+    <label for="email">Email</label>
+    <input type="email" class="form-control mb-4" name="email" id="email" placeholder="">
+    <div class="center d-flex justify-content-center">
+      <input name="submit" id="submit" class="btn btn-primary center" type="submit" value="Suscribe">
+    </div>
+  </form>
+</div>
+
+
+
+<%- include('../partials/end-body'); %>
