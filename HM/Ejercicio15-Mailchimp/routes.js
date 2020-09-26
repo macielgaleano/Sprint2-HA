@@ -1,17 +1,28 @@
 module.exports= function(app) {
-
-    //Api key: d53f45edfe405e2764e1071223e73088-us2
-    curl -X POST \
-  https://server.api.mailchimp.com/3.0/lists \
-  -H 'authorization: Basic <USERNAME:PASSWORD>' \
-  -d '{"name":"","contact":{"company":"","address1":"","address2":"","city":"","state":"","zip":"","country":"","phone":""},"permission_reminder":"","use_archive_bar":false,"campaign_defaults":{"from_name":"","from_email":"","subject":"","language":""},"notify_on_subscribe":"","notify_on_unsubscribe":"","email_type_option":false,"visibility":"pub","double_optin":false,"marketing_permissions":false}'
-
     app.get('/newsletter-registro', function(req,res){
         res.render('pages/register');
     });
 
     app.post('/newsletter-registro', function(req,res){
-        res.send('si');
+        console.log(req.body.name, req.body.surname, req.body.email);
+
+        const mailchimp = require('@mailchimp/mailchimp_marketing');
+
+        mailchimp.setConfig({
+            apiKey: 'd53f45edfe405e2764e1071223e73088-us2',
+            server: 'us2',
+        });
+
+        const run = async () => {
+        const response = await mailchimp.lists.addListMember("04181bbdf1", {
+            email_address: req.body.email,
+            status: "subscribed",
+        });
+        console.log(response);
+        };
+
+        run();
+        res.render('pages/register');
     });
 
     app.get('/newsletter-gracias', function(req,res){
@@ -21,6 +32,8 @@ module.exports= function(app) {
     app.get('/newsletter-error', function(req,res){
         res.send('si');
     });
+
+    
 
 
 
