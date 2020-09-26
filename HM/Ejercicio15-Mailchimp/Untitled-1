@@ -1,6 +1,6 @@
 
     //Api key: d53f45edfe405e2764e1071223e73088-us2
-    //Audience: 958134
+    //Audience: 04181bbdf1
 
     curl --request GET \
   --url 'https://us2.api.mailchimp.com/3.0/' \
