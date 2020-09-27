@@ -1,20 +1,24 @@
 <%- include('../partials/head'); %>
 
-<div class="container">
-  <form method="POST" action='/newsletter-registro' class="form-group mt-4">
-  
-    <label for="name">Name</label>
-    <input type="text" name="name" id="name" class="form-control" placeholder="" >
-    
-    <label for="surname">Surname</label>
-    <input type="text" name="surname" id="surname" class="form-control" placeholder="" >
-    
-    <label for="email">Email</label>
-    <input type="email" class="form-control mb-4" name="email" id="email" placeholder="">
-    <div class="center d-flex justify-content-center">
-      <input name="submit" id="submit" class="btn btn-primary center" type="submit" value="Suscribe">
+<div class="container father">
+  <div class="row">
+    <div class="col-4 center mt-10">
+      <form method="POST" action='/newsletter-registro' class="form-group mt-4">
+        <h2 class="display-5 mb-5 text-center text-white">News Letter</h2>
+        <label class='text-white' for="name">Name</label>
+        <input type="text" name="name" id="name" class="form-control" placeholder="" >
+        
+        <label class='text-white' for="surname">Surname</label>
+        <input type="text" name="surname" id="surname" class="form-control" placeholder="" >
+        
+        <label class='text-white' for="email">Email</label>
+        <input type="email" class="form-control mb-4" name="email" id="email" placeholder="">
+        <div class=" d-flex justify-content-center">
+          <input name="submit" id="submit" class="btn btn-success center" type="submit" value="Suscribe">
+        </div>
+      </form>
     </div>
-  </form>
+  </div>
 </div>
 
 

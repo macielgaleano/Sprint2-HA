@@ -1,3 +1,20 @@
 .center {
-    margin: 0 auto;
+    margin: 0 auto; 
+    background: rgb(173, 70, 70);
+    -webkit-box-shadow: -5px 17px 58px -6px rgba(0,0,0,0.75);
+    -moz-box-shadow: -5px 17px 58px -6px rgba(0,0,0,0.75);
+    box-shadow: -5px 17px 58px -6px rgba(0,0,0,0.75);
+    padding: 10px 30px;
 }
+
+.mt-10 {
+    margin-top: 10rem;
+}
+
+label {
+    margin-top: 8px;
+}
+
+
+
+
