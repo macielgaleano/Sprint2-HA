@@ -8,7 +8,7 @@ const sendHttpRequest = (method, url, data) => {
          return res.json();
      })
      .then(responseData => {
-         console.log(responseData);
+				 console.log(responseData);
      });
 };
 
