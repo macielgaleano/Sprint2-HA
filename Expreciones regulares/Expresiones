@@ -1,0 +1,18 @@
+Expresion regular para nombres con espacios y tabulaciones
+^\w+\s?\w+?\s?$
+
+Expresion regular para numeros de telefonos\
+^\d{3}\s\d{3}\s\d{2}\s\d{2}\s?$
+
+Nueva expresion regular para numeros de telefonos
+^\d{3}[\s-.]\d{3}[\s-.]\d{2}[\s-.]\d{2}[\s-.]
+
+Expresion de conjunto de caracteres
+[a-zA-Z@_/:]
+
+-Numero de telefono que comienza con 449 o 448
+-La siguiente cadena va tener un largo de 3 y va se de numeros, puede contener un espacio o un guion]
+-Las sigueintes dos cadenas {2} van a ser de dos numeros y van a tener un espacio o un guion
+(449|448)[\s-]\d{3}([\s-]\d{2}){2}
+
+

@@ -1,9 +1,14 @@
 module.exports= function(app) {
+
     app.get('/newsletter-registro', function(req,res){
         res.render('pages/register');
     });
 
-    app.post('/newsletter-registro', function(req,res){
+    const validateData = (req,res,next) => {
+
+    }
+
+    app.post('/newsletter-registro', validateData, function(req,res){
         console.log(req.body.name, req.body.surname, req.body.email);
 
         const mailchimp = require('@mailchimp/mailchimp_marketing');
@@ -26,11 +31,11 @@ module.exports= function(app) {
     });
 
     app.get('/newsletter-gracias', function(req,res){
-        res.send('si');
+        res.send('Gracias!! 😄');
     });
 
     app.get('/newsletter-error', function(req,res){
-        res.send('si');
+        res.send('PIUM Error!! ❌');
     });
 
     
