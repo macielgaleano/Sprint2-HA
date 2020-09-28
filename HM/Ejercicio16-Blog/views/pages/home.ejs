@@ -1,14 +1,18 @@
 <%- include('../partials/head'); %>
 
-<div class="jumbotron jumbotron-fluid">
-  <div class="container">
-    <h1 class="display-3">Fluid jumbo heading</h1>
-    <p class="lead">Jumbo helper text</p>
-    <hr class="my-2">
-    <p>More info</p>
-    <p class="lead">
-      <a class="btn btn-primary btn-lg" href="Jumbo action link" role="button">Jumbo action name</a>
-    </p>
+<div class="container">
+  <div class="row">
+    
+    <% for(var i=0; i<articles_home.length; i++) {%>
+      <div class="col-8 mt-5 mb-5 center">
+        <h2 class="display-5">
+          <%=articles_home[i].id +'- ' +  articles_home[i].title %> 
+        </h2>
+        <p class="lead mb-2"> <%= articles_home[i].content %> </p>
+        <a name="" id="" class="btn btn-success" href="/articulo/<%- articles_home[i].id %>" role="button">Read more...</a>
+      </div>
+    <% } %>
+    
   </div>
 </div>
 

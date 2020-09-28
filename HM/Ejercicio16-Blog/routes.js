@@ -5,22 +5,22 @@ module.exports = function(app){
 
   let articles_home = [];
 
+  async function getArticlesForHome(){
+    let response = await fetch(url);
+    let data = await response.json();
+    return data; 
+  }
+
   app.get('/', (req,res) => {
-    async function getArticlesForHome(){
-      let response = await fetch(url);
-      let data = await response.json();
-      return data; 
-    }
     getArticlesForHome()
     .then(
       (data => {
-       
         data.map((item, index, arr) => {
           contentShorted =  () => {
             if( item.content.length < 50) {
               return item.content
             }else if( item.content.length > 50){
-              return item.content.substr(1,50) + '...'
+              return item.content.substr(3,50) + '...'
             }
           }
           articles_home.push({
@@ -31,12 +31,25 @@ module.exports = function(app){
         })
       })
     );
-    res.render('pages/home', {articles: articles_home});
+    res.render('pages/home', {articles_home: articles_home});
   })
   
   
 
   app.get('/articulo/:id', (req,res) => {
-
+    getArticlesForHome()
+      .then(data => {
+        for (let i = 0; i < data.length; i++) {
+          if(data[i].id == req.params.id){  
+            res.render('pages/article', {
+              id: data[i].id,
+              title: data[i].title,
+              content: data[i].content,
+              img_link: data[i].image,
+              author: data[i].author
+            })
+          }
+        }
+      })
   })
 }

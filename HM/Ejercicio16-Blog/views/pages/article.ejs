@@ -1,0 +1,17 @@
+<%- include('../partials/head'); %>
+
+<div class="container">
+  <div class="row mt-5">
+   <div class="col-4">
+    <img class='fluid-img' src="<%= img_link %>" alt="">
+   </div>
+   <div class="col-8">
+     <h2 class="display-5 mb-3"><%- id + '- ' + title%></h2>
+     <%- content%>
+     <small class="d-flex strong"><%= author%></small>
+     <a name="" id="" class="btn btn-success mt-4" href="/" role="button">Return</a>
+  </div>
+  </div>
+</div>
+
+<%- include('../partials/end-body'); %>
