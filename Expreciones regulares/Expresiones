@@ -22,7 +22,6 @@ Expresion regular para correos
 ^[a-zA-Z0-9._]+@[a-zA-Z0-9._]+\.[a-zA-Z]+$
 
 Expresion regular para direcciones web 
-
 ^(http:\/\/|https:\/\/|https?:\/\/)?(www\.)?[a-zA-Z0-9_.]+\.(com|net|mx|com\.mx)$
 
 

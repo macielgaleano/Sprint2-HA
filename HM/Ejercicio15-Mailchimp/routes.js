@@ -4,8 +4,16 @@ module.exports= function(app) {
         res.render('pages/register');
     });
 
-    const validateData = (req,res,next) => {
-
+    const validateData = async(req,res,next) => {
+        if (await req.body.name) {
+            console.log('OK-' + req.body.name);
+        }
+        if (await req.body.surname) {
+            console.log('OK-' + req.body.name);
+        }
+        if (await req.body.email) {
+            console.log('OK-' + req.body.name);
+        }
     }
 
     app.post('/newsletter-registro', validateData, function(req,res){
