@@ -1,0 +1,57 @@
+<%- include('../partials/head'); %>
+
+<div class="container">
+  <div class="row">
+    <div class="col-6">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Apellido</th>
+            <th scope="col">Edad</th>
+            <th scope="col">Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+        </tbody>
+      </table>
+      <a name="" id="" class="btn btn-primary mt-5" href="#" role="button">Ir a la pagina de inicio</a>
+    </div>
+    <div class="col-5 ml-5">
+      <h2 class="nuevoUsuarioTitle">Crear nuevo usuario</h2>
+      <form class="form-group" action="/usuarios" method="post">
+          <label for="nombre" class="mb-2 pt-2">Nombre</label>
+          <input type="text"
+            class="form-control" name="nombre" id="nombre" aria-describedby="helpId" placeholder="Ingrese nombre...">
+          <label for="apellido" class="mb-2 pt-2">Apellido</label>
+          <input type="text"
+            class="form-control" name="apellido" id="apellido" aria-describedby="helpId" placeholder="Ingrese apellido...">
+            <label for="edad" class="mb-2 pt-2">Edad</label>
+          <input type="text"
+            class="form-control" name="edad" id="edad" aria-describedby="helpId" placeholder="Ingrese edad...">
+        <a name="" id="save" class="btn btn-success mt-3" href="#" role="button">Guardad</a>
+        </form>
+
+      <h2 class="nuevoUsuarioTitle">Modificar usuario</h2>
+      <form class="form-group" action="/usuarios/modificar" method="post">
+        <label for="id" class="mb-2 pt-2">Id</label>
+          <input type="text"
+            class="form-control" name="id" id="id" aria-describedby="helpId" placeholder="Ingrese id...">
+          <label for="nombre" class="mb-2 pt-2">Nombre</label>
+          <input type="text"
+            class="form-control" name="nombre" id="nombre" aria-describedby="helpId" placeholder="Ingrese nombre...">
+          <label for="apellido" class="mb-2 pt-2">Apellido</label>
+          <input type="text"
+            class="form-control" name="apellido" id="apellido" aria-describedby="helpId" placeholder="Ingrese apellido...">
+            <label for="edad" class="mb-2 pt-2">Edad</label>
+          <input type="text"
+            class="form-control" name="edad" id="edad" aria-describedby="helpId" placeholder="Ingrese edad...">
+        <a name="" id="save" class="btn btn-success mt-3" href="#" role="button">Guardad</a>
+        </form>
+    </div>
+  </div>
+</div>
+
+<%- include('../partials/end-body'); %>

@@ -6,3 +6,5 @@ CREATE TABLE `usuarios` (
 `password` varchar (150) DEFAULT NULL,  
 PRIMARY KEY (`id`)
 );
+
+insert into usuarios values ('maciel','galeano',19,'joseliito');
