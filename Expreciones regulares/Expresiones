@@ -15,4 +15,15 @@ Expresion de conjunto de caracteres
 -Las sigueintes dos cadenas {2} van a ser de dos numeros y van a tener un espacio o un guion
 (449|448)[\s-]\d{3}([\s-]\d{2}){2}
 
+Para correos simples
+\w+@\w+\.[a-zA-Z]+
+
+Expresion regular para correos
+^[a-zA-Z0-9._]+@[a-zA-Z0-9._]+\.[a-zA-Z]+$
+
+Expresion regular para direcciones web 
+
+^(http:\/\/|https:\/\/|https?:\/\/)?(www\.)?[a-zA-Z0-9_.]+\.(com|net|mx|com\.mx)$
+
+
 
