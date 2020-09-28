@@ -26,16 +26,10 @@ getAllVehicules();
 
 const vehicles = ['car','truck','bus'];
 
-const vehiclesMap = vehicles.map(async v => {
-  const emoji = await getVehicle(v)
-  console.log('-' + emoji)
-  return emoji
-}); 
 
-//using for with await
 
 const vehiclesLoop = async() => {
-  for( const vehicle of vehicles ){
+  for await( const vehicle of vehicles ){
     const emoji = await getVehicle(vehicle);
     console.log(vehicle + emoji)
   }
@@ -47,7 +41,7 @@ vehiclesLoop();
 
 const VehiclesLoop2 = async() => {
   for await (const emoji of vehicles){
-    console.log(emoji);
+    console.log('VehiclesLoop2 - ' + emoji);
   }
 }
 
@@ -61,4 +55,13 @@ const VehicleInspection = async() => {
   }
 } 
 
-VehicleInspection();
+// VehicleInspection();
+
+
+// const vehiclesMap = vehicles.map(async v => {
+//   const emoji = await getVehicle(v)
+//   console.log('-' + emoji)
+//   return emoji
+// }); 
+
+//using for with await
