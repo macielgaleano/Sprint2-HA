@@ -14,7 +14,25 @@
           </tr>
         </thead>
         <tbody>
-          
+          <% for(var i=0; i<users.length; i++) {%>
+            <tr>
+              <th scope="row">
+                <%- users[i].id %>
+              </th>
+              <td>
+                <%- users[i].firstname %>
+              </td>
+              <td>
+                <%- users[i].lastname %>
+              </td>
+              <td>
+                <%- users[i].age %>
+              </td>
+              <td>
+                <a name="" id="" class="btn btn-danger" href="usuarios/eliminar/<%-users[i].id%>" role="button">Eliminar</a>
+              </td>
+            </tr>
+          <% } %>
         </tbody>
       </table>
       <a name="" id="" class="btn btn-primary mt-5" href="#" role="button">Ir a la pagina de inicio</a>
