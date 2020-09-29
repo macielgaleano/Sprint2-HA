@@ -9,7 +9,7 @@ let greaterThan = numbers.filter(item => item > 20 );
   -Actual item  of array
   -Index of the item on the array
   -Actual array
-*/
+*/  
 
 let greaterThan2 = numbers.filter((item, index, array) => index > 10);
 console.log (greaterThan2);

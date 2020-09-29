@@ -39,18 +39,18 @@
     </div>
     <div class="col-5 ml-5">
       <h2 class="nuevoUsuarioTitle">Crear nuevo usuario</h2>
-      <form class="form-group" action="/usuarios" method="post">
-          <label for="nombre" class="mb-2 pt-2">Nombre</label>
-          <input type="text"
-            class="form-control" name="nombre" id="nombre" aria-describedby="helpId" placeholder="Ingrese nombre...">
-          <label for="apellido" class="mb-2 pt-2">Apellido</label>
-          <input type="text"
-            class="form-control" name="apellido" id="apellido" aria-describedby="helpId" placeholder="Ingrese apellido...">
-            <label for="edad" class="mb-2 pt-2">Edad</label>
-          <input type="text"
-            class="form-control" name="edad" id="edad" aria-describedby="helpId" placeholder="Ingrese edad...">
-        <a name="" id="save" class="btn btn-success mt-3" href="#" role="button">Guardad</a>
-        </form>
+      <form method="POST" action="/usuarios"class="form-group"  >
+        <label for="nombre" class="mb-2 pt-2">Nombre</label>
+        <input type="text"
+          class="form-control" name="nombre" id="nombre" aria-describedby="helpId" placeholder="Ingrese nombre...">
+        <label for="apellido" class="mb-2 pt-2">Apellido</label>
+        <input type="text"
+          class="form-control" name="apellido" id="apellido" aria-describedby="helpId" placeholder="Ingrese apellido...">
+          <label for="edad" class="mb-2 pt-2">Edad</label>
+        <input type="text"
+          class="form-control" name="edad" id="edad" aria-describedby="helpId" placeholder="Ingrese edad...">
+        <button name="" type='submit' id="save" class="btn btn-success mt-3" href="" role="button">Guardar</button>
+      </form>
 
       <h2 class="nuevoUsuarioTitle">Modificar usuario</h2>
       <form class="form-group" action="/usuarios/modificar" method="post">
@@ -66,7 +66,7 @@
             <label for="edad" class="mb-2 pt-2">Edad</label>
           <input type="text"
             class="form-control" name="edad" id="edad" aria-describedby="helpId" placeholder="Ingrese edad...">
-        <a name="" id="save" class="btn btn-success mt-3" href="#" role="button">Guardad</a>
+        <button type='submit' name="" id="save" class="btn btn-success mt-3" href="#" role="button">Guardar</button>
         </form>
     </div>
   </div>
