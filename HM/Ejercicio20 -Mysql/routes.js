@@ -9,14 +9,20 @@ module.exports = function(app){
     database: 'test'
   });
 
-  let miQuery = (query, cb) => {
+  const miQuery = (query, cb) => {
+    const connection = mysql.createConnection({
+      host: 'localhost',
+      user: 'root',
+      password: '',
+      database: 'test'
+    });
     connection.connect(function(err){
       if(err) throw err;
       console.log('DB conncected!🐦')
       connection.query(query, (err, users) => {
         if(err) throw err;
-        cb(users);
         connection.end();
+        cb(users);
       })
     }); 
   }
