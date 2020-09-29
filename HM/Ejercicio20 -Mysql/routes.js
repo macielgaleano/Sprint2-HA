@@ -82,8 +82,8 @@ module.exports = function(app){
 
     miQuery(`select * from users where id = ${connection.escape(req.body.id)}`, (user) => {
       let nombre;
-      let apellido;
-      let edad;
+          apellido;
+          edad;
       req.body.nombre.length > 0 ? nombre=req.body.nombre : nombre=user[0].firstname;
       req.body.apellido.length > 0 ? apellido=req.body.apellido : apellido=user[0].lastname; 
       req.body.edad.length > 0 ? edad=req.body.edad : edad=user[0].age;  
