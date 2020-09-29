@@ -39,16 +39,17 @@
     </div>
     <div class="col-5 ml-5">
       <h2 class="nuevoUsuarioTitle">Crear nuevo usuario</h2>
-      <form method="POST" action="/usuarios"class="form-group"  >
+      <form method="POST" action="/usuarios"class="form-group" data-parsley-validate="" >
         <label for="nombre" class="mb-2 pt-2">Nombre</label>
         <input type="text"
-          class="form-control" name="nombre" id="nombre" aria-describedby="helpId" placeholder="Ingrese nombre...">
+          class="form-control" name="nombre"  id="nombre" aria-describedby="helpId" placeholder="Ingrese nombre..." required="" 
+          data-parsley-required-message='Por favor ingrese un numbre'>
         <label for="apellido" class="mb-2 pt-2">Apellido</label>
         <input type="text"
-          class="form-control" name="apellido" id="apellido" aria-describedby="helpId" placeholder="Ingrese apellido...">
+          class="form-control" name="apellido" required="" id="apellido" aria-describedby="helpId" placeholder="Ingrese apellido...">
           <label for="edad" class="mb-2 pt-2">Edad</label>
         <input type="text"
-          class="form-control" name="edad" id="edad" aria-describedby="helpId" placeholder="Ingrese edad...">
+          class="form-control" name="edad" required="" id="edad" aria-describedby="helpId" placeholder="Ingrese edad...">
         <button name="" type='submit' id="save" class="btn btn-success mt-3" href="" role="button">Guardar</button>
       </form>
 
@@ -56,16 +57,16 @@
       <form class="form-group" action="/usuarios/modificar" method="post">
         <label for="id" class="mb-2 pt-2">Id</label>
           <input type="text"
-            class="form-control" name="id" id="id" aria-describedby="helpId" placeholder="Ingrese id...">
+            class="form-control"  required="" name="id" id="id" aria-describedby="helpId" placeholder="Ingrese id...">
           <label for="nombre" class="mb-2 pt-2">Nombre</label>
           <input type="text"
-            class="form-control" name="nombre" id="nombre" aria-describedby="helpId" placeholder="Ingrese nombre...">
+            class="form-control" required="" name="nombre" id="nombre" aria-describedby="helpId" placeholder="Ingrese nombre...">
           <label for="apellido" class="mb-2 pt-2">Apellido</label>
           <input type="text"
-            class="form-control" name="apellido" id="apellido" aria-describedby="helpId" placeholder="Ingrese apellido...">
+            class="form-control" required="" name="apellido" id="apellido" aria-describedby="helpId" placeholder="Ingrese apellido...">
             <label for="edad" class="mb-2 pt-2">Edad</label>
           <input type="text"
-            class="form-control" name="edad" id="edad" aria-describedby="helpId" placeholder="Ingrese edad...">
+            class="form-control" required="" name="edad" id="edad" aria-describedby="helpId" placeholder="Ingrese edad...">
         <button type='submit' name="" id="save" class="btn btn-success mt-3" href="#" role="button">Guardar</button>
         </form>
     </div>
