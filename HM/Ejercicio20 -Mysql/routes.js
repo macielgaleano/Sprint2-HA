@@ -67,13 +67,13 @@ module.exports = function(app){
   })
 
   app.post('/usuarios/modificar' , [
-    check('id').matches(/[0-9]{4}?/).withMessage('El id no es valido'),
+    check('id').matches(/[0-9]{1,2}?/).withMessage('El id no es valido'),
     body('nombre').not().isEmpty().trim().escape(),
     body('apellido').not().isEmpty().trim().escape(),
     body('nombre').isLength({ min: 3 }).withMessage('El nombre requiere mas de 3 caracteres'),
     body('apellido').isLength({ min: 3 }).withMessage('El apellido requiere masde 3 caracteres'),
     check('edad').matches(/[0-9]{2}/).withMessage('La edad no es valida')
-  ] , (req, res) => {
+  ], (req, res) => {
 
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
@@ -81,8 +81,8 @@ module.exports = function(app){
     }
 
     miQuery(`select * from users where id = ${connection.escape(req.body.id)}`, (user) => {
-      let nombre;
-          apellido;
+      let nombre,
+          apellido,
           edad;
       req.body.nombre.length > 0 ? nombre=req.body.nombre : nombre=user[0].firstname;
       req.body.apellido.length > 0 ? apellido=req.body.apellido : apellido=user[0].lastname; 
