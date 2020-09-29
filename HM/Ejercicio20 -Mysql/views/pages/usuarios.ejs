@@ -37,36 +37,49 @@
       </table>
       <a name="" id="" class="btn btn-primary mt-5" href="#" role="button">Ir a la pagina de inicio</a>
     </div>
-    <div class="col-5 ml-5">
+      <div class="col-5 ml-5">
       <h2 class="nuevoUsuarioTitle">Crear nuevo usuario</h2>
-      <form method="POST" action="/usuarios"class="form-group" data-parsley-validate="" >
-        <label for="nombre" class="mb-2 pt-2">Nombre</label>
-        <input type="text"
-          class="form-control" name="nombre"  id="nombre" aria-describedby="helpId" placeholder="Ingrese nombre..." required="" 
-          data-parsley-required-message='Por favor ingrese un numbre'>
-        <label for="apellido" class="mb-2 pt-2">Apellido</label>
-        <input type="text"
-          class="form-control" name="apellido" required="" id="apellido" aria-describedby="helpId" placeholder="Ingrese apellido...">
-          <label for="edad" class="mb-2 pt-2">Edad</label>
-        <input type="text"
-          class="form-control" name="edad" required="" id="edad" aria-describedby="helpId" placeholder="Ingrese edad...">
-        <button name="" type='submit' id="save" class="btn btn-success mt-3" href="" role="button">Guardar</button>
-      </form>
-
-      <h2 class="nuevoUsuarioTitle">Modificar usuario</h2>
-      <form class="form-group" action="/usuarios/modificar" method="post">
-        <label for="id" class="mb-2 pt-2">Id</label>
-          <input type="text"
-            class="form-control"  required="" name="id" id="id" aria-describedby="helpId" placeholder="Ingrese id...">
+        <form method="POST" action="/usuarios"class="form-group" data-parsley-validate="" >
           <label for="nombre" class="mb-2 pt-2">Nombre</label>
           <input type="text"
-            class="form-control" required="" name="nombre" id="nombre" aria-describedby="helpId" placeholder="Ingrese nombre...">
+            class="form-control" name="nombre"  id="nombre" aria-describedby="helpId" placeholder="Ingrese nombre..." required="" 
+            data-parsley-required-message='Por favor ingrese un nombre' data-parsley-pattern="^[a-zA-Z]{4,20}" 
+            data-parsley-pattern-message="Por favor, ingrese un nombre valido" >
           <label for="apellido" class="mb-2 pt-2">Apellido</label>
           <input type="text"
-            class="form-control" required="" name="apellido" id="apellido" aria-describedby="helpId" placeholder="Ingrese apellido...">
+            class="form-control" name="apellido" required="" id="apellido" aria-describedby="helpId" placeholder="Ingrese apellido..."
+            data-parsley-required-message='Por favor ingrese un apellido' data-parsley-pattern="^[a-zA-Z]{4,20}" 
+            data-parsley-pattern-message="Por favor, ingrese un apellido valido">
             <label for="edad" class="mb-2 pt-2">Edad</label>
           <input type="text"
-            class="form-control" required="" name="edad" id="edad" aria-describedby="helpId" placeholder="Ingrese edad...">
+            class="form-control" name="edad" required="" id="edad" aria-describedby="helpId" placeholder="Ingrese edad..."
+            data-parsley-required-message='Por favor ingrese su edad' data-parsley-pattern="[0-9]{2}" 
+            data-parsley-pattern-message="Por favor, ingrese una edad valida">
+          <button name="" type='submit' id="save" class="btn btn-success mt-3" href="" role="button">Guardar</button>
+        </form>
+
+      <h2 class="nuevoUsuarioTitle">Modificar usuario</h2>
+      <form class="form-group" action="/usuarios/modificar" method="post" data-parsley-validate="" >
+        <label for="id" class="mb-2 pt-2">Id</label>
+          <input type="text"
+            class="form-control"  required="" name="id" id="id" aria-describedby="helpId" placeholder="Ingrese id..."
+            required="" data-parsley-required-message='Por favor ingrese un id' data-parsley-pattern="[0-9]{1,2}" 
+              data-parsley-pattern-message="Por favor, ingrese un id valido">
+            <label for="nombre" class="mb-2 pt-2">Nombre</label>
+            <input type="text"
+              class="form-control" name="nombre"  id="nombre" aria-describedby="helpId" placeholder="Ingrese nombre..." required="" 
+              data-parsley-required-message='Por favor ingrese un nombre' data-parsley-pattern="^[a-zA-Z]{4,20}" 
+              data-parsley-pattern-message="Por favor, ingrese un nombre valido" >
+            <label for="apellido" class="mb-2 pt-2">Apellido</label>
+            <input type="text"
+              class="form-control" name="apellido" required="" id="apellido" aria-describedby="helpId" placeholder="Ingrese apellido..."
+              data-parsley-required-message='Por favor ingrese un apellido' data-parsley-pattern="^[a-zA-Z]{4,20}" 
+              data-parsley-pattern-message="Por favor, ingrese un apellido valido">
+              <label for="edad" class="mb-2 pt-2">Edad</label>
+            <input type="text"
+              class="form-control" name="edad" required="" id="edad" aria-describedby="helpId" placeholder="Ingrese edad..."
+              data-parsley-required-message='Por favor ingrese su edad' data-parsley-pattern="[0-9]{2}" 
+              data-parsley-pattern-message="Por favor, ingrese una edad valida">
         <button type='submit' name="" id="save" class="btn btn-success mt-3" href="#" role="button">Guardar</button>
         </form>
     </div>
